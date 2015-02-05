@@ -27,4 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ansible.inventory_path = "provisioning/inventory-local"
     ansible.sudo = true
   end
+
+  # Make sure that we can access all our project files
+  config.vm.synced_folder "../", "/var/www/site/", type: "nfs"
 end

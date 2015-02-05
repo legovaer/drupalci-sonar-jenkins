@@ -108,11 +108,6 @@ INSERT INTO properties VALUES (NULL, 'sonar.phpCodesniffer.customRules.definitio
     <configKey>WRONGSTYLE</configKey>
     <description>Drupal.Commenting.InlineComment.WrongStyle</description>
   </rule>
-  <rule key="Drupal.Semantics.Br.XHTMLBr" priority="MAJOR">
-    <name>Drupal.Semantics.Br.XHTMLBr</name>
-    <configKey>XHTMLBR</configKey>
-    <description>Drupal.Semantics.Br.XHTMLBr</description>
-  </rule>
   <rule key="Drupal.Strings.UnnecessaryStringConcat.Found" priority="MAJOR">
     <name>Drupal.Strings.UnnecessaryStringConcat.Found</name>
     <configKey>FOUND</configKey>

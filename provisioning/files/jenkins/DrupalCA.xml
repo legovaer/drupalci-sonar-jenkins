@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+      <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+          <hudson.model.TextParameterDefinition>
+              <name>path</name>
+              <description></description>
+              <defaultValue></defaultValue>
+          </hudson.model.TextParameterDefinition>
+      </parameterDefinitions>
+      </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <authToken>C9M5ynvpf68oUhD9v9okP8FtAh63eQmN</authToken>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.plugins.sonar.SonarRunnerBuilder plugin="sonar@2.1">
+      <project>/etc/sonar/sonar-ca.properties</project>
+      <properties></properties>
+      <javaOpts></javaOpts>
+      <jdk>(Inherit From Job)</jdk>
+      <task></task>
+        <hudson.tasks.Shell>
+            <command>cp /var/www/sites/${PATH} ${WORKSPACE}/code</command>
+        </hudson.tasks.Shell>
+    </hudson.plugins.sonar.SonarRunnerBuilder>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
